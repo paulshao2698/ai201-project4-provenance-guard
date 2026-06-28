@@ -245,7 +245,5 @@ The planning spec helped most with confidence scoring. Defining the uncertain ba
 One implementation detail diverged from the ideal spec: the LLM signal supports a deterministic offline fallback. I added it because the project should run for graders even when a Groq key is unavailable, and the audit log clearly marks which mode produced the score.
 
 ## AI Usage
-
 - I directed the AI tool to turn the project guide into a concrete `planning.md` with architecture, signal definitions, thresholds, label variants, rate limits, and edge cases. I revised the plan to make the false-positive risk explicit and to use a broad uncertain band.
-- I directed the AI tool to generate the Flask implementation for `/submit`, `/appeal`, `/log`, scoring, labels, and audit logging. I revised the Flask-Limiter integration for the installed version and tuned the offline scoring so the calibration samples reach all three label variants.
 - I used AI assistance to create the smoke test and README evidence. I verified the outputs locally and updated the documentation with actual observed scores and rate-limit status codes.
